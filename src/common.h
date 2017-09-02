@@ -14,9 +14,9 @@ using namespace std; // I know it's bad...
 
 // helpers that don't expand to anything - used by the type parser
 #define FIELD    // indicates the start of a field definition inside of a type
-#define INLINE   // class attribute - emitted reflection methods should not be marked as inline
-#define CALLBACK // field attribute - the given callback will be called after the field changes
-#define ATTRIBUTES(...) // list attributes and tags in a comma-separated fashion using this
+#define INLINE   // class attribute - emitted functions should be marked as inline
+#define CALLBACK // field attribute - call the callback after the field changes
+#define ATTRIBUTES(...) // comma-separated list of attributes and tags into this
 
 namespace tag {
     struct special {};
