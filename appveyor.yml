@@ -1,0 +1,13 @@
+# http://www.appveyor.com/docs/appveyor-yml
+
+notifications:
+  - provider: Email
+    on_build_status_changed: false
+    on_build_failure: false
+    on_build_success: false
+
+image: Visual Studio 2017
+
+build_script:
+  - cmake .
+  - cmake --build .
