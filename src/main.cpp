@@ -1,7 +1,20 @@
 #include "foo.h"
 
+class Bar {
+    FRIENDS_OF_TYPE(Bar);
+
+    FIELD Foo foo; // compound types just work
+
+    FIELD std::string str = "normal";
+
+    ATTRIBUTES(tag::special, CALLBACK(Bar::some_callback))
+    FIELD std::string tagged_str = "tagged!";
+
+    static void some_callback(Bar& src) { cout << "  [callback] Bar::tagged_str changed!" << endl; }
+};
+
 int main() {
-    Foo obj;
+    Bar obj;
     auto original_state = serialize(obj);
 
     cout << endl << "[info] initial state of object:" << endl;
@@ -25,3 +38,5 @@ int main() {
 
     system("pause");
 }
+
+#include <gen/main.cpp.inl>
