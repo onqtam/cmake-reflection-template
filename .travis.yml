@@ -32,6 +32,9 @@ matrix:
           packages: ["clang-4.0", "g++-7", "libc++1", "libc++-dev"]
           sources: *apt_sources
 
+  allow_failures:
+    - env: COMPILER=clang++-4.0
+    
 install:
   - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
   - mkdir ${DEPS_DIR} && cd ${DEPS_DIR}
