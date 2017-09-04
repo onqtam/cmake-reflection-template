@@ -29,7 +29,7 @@ matrix:
     - env: COMPILER=clang++-4.0
       addons: &clang4
         apt:
-          packages: ["clang-4.0", "g++-7", "libc++1", "libc++-dev"]
+          packages: ["clang-4.0", "g++-7", "libc++-dev", "libc++abi-dev"]
           sources: *apt_sources
 
   allow_failures:
