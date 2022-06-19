@@ -7,4 +7,4 @@
 
 Requires C++17 (because of its use of ```std::any<>``` from ```<any>```).
 
-For information about this repository checkout this [**blog post**](http://onqtam.com/programming/2017-09-02-simple-cpp-reflection-with-cmake/).
+For information about this repository checkout this [**blog post**](http://onqtam.github.io/programming/2017-09-02-simple-cpp-reflection-with-cmake/).
